@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bethesda Mobile Detailing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo">
+        <span class="logo-main">Bethesda</span>
+        <span class="logo-sub">Mobile Detailing</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#booking">Book Now</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-tagline">Bethesda, Maryland</p>
+      <h1>Bethesda Mobile<br/>Detailing</h1>
+      <p class="hero-slogan">Car Detailing — From the comfort of your home.</p>
+      <div class="hero-buttons">
+        <a href="#booking" class="btn btn-primary">Book Now</a>
+        <a href="#services" class="btn btn-outline">Our Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section services">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-subtitle">Professional detailing delivered to your driveway.</p>
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-icon">🚗</div>
+          <h3>Exterior Detail</h3>
+          <div class="service-price">$40</div>
+          <ul class="service-features">
+            <li>Hand wash &amp; dry</li>
+            <li>Wheel &amp; tire cleaning</li>
+            <li>Window cleaning</li>
+            <li>Exterior wipe-down</li>
+          </ul>
+          <a href="#booking" class="btn btn-primary btn-sm">Book This</a>
+        </div>
+
+        <div class="service-card featured">
+          <div class="featured-badge">Most Popular</div>
+          <div class="service-icon">✨</div>
+          <h3>Full Detail</h3>
+          <div class="service-price">$80</div>
+          <ul class="service-features">
+            <li>Everything in Exterior</li>
+            <li>Everything in Interior</li>
+            <li>Full interior vacuum</li>
+            <li>Dashboard &amp; console wipe</li>
+          </ul>
+          <a href="#booking" class="btn btn-primary btn-sm">Book This</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🧽</div>
+          <h3>Interior Detail</h3>
+          <div class="service-price">$50</div>
+          <ul class="service-features">
+            <li>Full vacuum</li>
+            <li>Dashboard &amp; console wipe</li>
+            <li>Door panel cleaning</li>
+            <li>Interior window cleaning</li>
+          </ul>
+          <a href="#booking" class="btn btn-primary btn-sm">Book This</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section about">
+    <div class="container about-grid">
+      <div class="about-text">
+        <h2 class="section-title">About Us</h2>
+        <p>Bethesda Mobile Detailing was founded with one simple mission: to bring professional, high-quality car detailing directly to you — no trips to a shop, no waiting around.</p>
+        <p>Based out of Bethesda, Maryland, our team takes pride in every vehicle we detail. We come to your home, your office, or wherever is most convenient for you.</p>
+        <div class="team">
+          <div class="team-member">
+            <div class="team-avatar">FH</div>
+            <div>
+              <strong>Fletch Hemeon</strong>
+              <span>Co-Founder</span>
+            </div>
+          </div>
+          <div class="team-member">
+            <div class="team-avatar">CS</div>
+            <div>
+              <strong>Connor Silverman</strong>
+              <span>Co-Founder</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-highlights">
+        <div class="highlight">
+          <div class="highlight-icon">📍</div>
+          <h4>We Come to You</h4>
+          <p>Mobile service throughout Bethesda, MD and surrounding areas.</p>
+        </div>
+        <div class="highlight">
+          <div class="highlight-icon">💧</div>
+          <h4>Professional Grade</h4>
+          <p>We use professional-grade products for a showroom shine every time.</p>
+        </div>
+        <div class="highlight">
+          <div class="highlight-icon">⏱️</div>
+          <h4>Convenient Scheduling</h4>
+          <p>Book online in seconds and we'll confirm your appointment quickly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section id="booking" class="section booking">
+    <div class="container">
+      <h2 class="section-title">Book an Appointment</h2>
+      <p class="section-subtitle">Fill out the form below and we'll get back to you to confirm your appointment.</p>
+
+      <form id="booking-form" class="booking-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First Name <span class="required">*</span></label>
+            <input type="text" id="firstName" name="firstName" placeholder="John" required />
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name <span class="required">*</span></label>
+            <input type="text" id="lastName" name="lastName" placeholder="Smith" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email Address <span class="required">*</span></label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number <span class="required">*</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="(240) 555-0000" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="service">Service <span class="required">*</span></label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Select a service...</option>
+              <option value="Exterior Detail - $40">Exterior Detail — $40</option>
+              <option value="Interior Detail - $50">Interior Detail — $50</option>
+              <option value="Full Detail - $80">Full Detail — $80</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="date">Preferred Date <span class="required">*</span></label>
+            <input type="date" id="date" name="date" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="address">Service Address <span class="required">*</span></label>
+          <input type="text" id="address" name="address" placeholder="123 Main St, Bethesda, MD 20814" required />
+        </div>
+
+        <div class="form-group">
+          <label for="carInfo">Vehicle Info</label>
+          <input type="text" id="carInfo" name="carInfo" placeholder="e.g. 2020 Honda Accord, Black" />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Additional Notes</label>
+          <textarea id="message" name="message" rows="4" placeholder="Any special requests or details about your vehicle..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+          <span id="btn-text">Send Booking Request</span>
+          <span id="btn-spinner" class="spinner hidden"></span>
+        </button>
+
+        <div id="form-success" class="form-feedback success hidden">
+          ✅ Your booking request has been sent! Fletch will reach out to confirm your appointment shortly.
+        </div>
+        <div id="form-error" class="form-feedback error hidden">
+          ❌ Something went wrong. Please try again or call us at (240) 788-8127.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <h2 class="section-title">Get in Touch</h2>
+        <p>Have questions? Reach out directly — we're happy to help.</p>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <strong>Phone</strong>
+              <a href="tel:+12407888127">(240) 788-8127</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:fletchhemeon@gmail.com">fletchhemeon@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <strong>Service Area</strong>
+              <span>Bethesda, Maryland &amp; surrounding areas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-cta">
+        <div class="cta-box">
+          <h3>Ready to get started?</h3>
+          <p>Book your detail today and we'll come straight to you.</p>
+          <a href="#booking" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-main">Bethesda</span>
+        <span class="logo-sub">Mobile Detailing</span>
+        <p>Car Detailing — From the comfort of your home.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#booking">Book Now</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Bethesda Mobile Detailing. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
