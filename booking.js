@@ -1,30 +1,43 @@
-// =============================================
+// ─────────────────────────────────────────────
 // EMAILJS CONFIGURATION
-// Replace these three values with yours from
-// emailjs.com dashboard:
+// Replace these three values — emailjs.com dashboard:
 //   Public Key  → Account > API Keys
 //   Service ID  → Email Services tab
 //   Template ID → Email Templates tab
-// =============================================
+// ─────────────────────────────────────────────
 const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
 const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';
 const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
 
 emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
 
-// Set minimum date to today
-const dateInput = document.getElementById('date');
-dateInput.min = new Date().toISOString().split('T')[0];
+// ── Pre-select service from URL param ──
+// e.g. booking.html?service=exterior
+const serviceMap = {
+  exterior: 'Exterior Detail - $40',
+  interior: 'Interior Detail - $50',
+  full:     'Full Detail - $80',
+};
+const param = new URLSearchParams(window.location.search).get('service');
+if (param && serviceMap[param]) {
+  const sel = document.getElementById('service');
+  if (sel) sel.value = serviceMap[param];
+}
 
-const form      = document.getElementById('booking-form');
-const submitBtn = document.getElementById('submit-btn');
-const btnText   = document.getElementById('btn-text');
-const spinner   = document.getElementById('spinner');
-const msgOk     = document.getElementById('msg-success');
-const msgErr    = document.getElementById('msg-error');
+// ── Set minimum selectable date to today ──
+const dateInput = document.getElementById('date');
+if (dateInput) dateInput.min = new Date().toISOString().split('T')[0];
+
+// ── Form elements ──
+const form    = document.getElementById('booking-form');
+const btn     = document.getElementById('submit-btn');
+const btnText = document.getElementById('btn-text');
+const spinner = document.getElementById('spinner');
+const msgOk   = document.getElementById('msg-success');
+const msgErr  = document.getElementById('msg-error');
 
 function setLoading(on) {
-  submitBtn.disabled = on;
+  btn.disabled = on;
   btnText.textContent = on ? 'Sending…' : 'Send booking request';
   spinner.classList.toggle('show', on);
 }
@@ -67,7 +80,7 @@ form.addEventListener('submit', async e => {
     msgOk.style.display = 'block';
     form.reset();
   } catch (err) {
-    console.error(err);
+    console.error('EmailJS error:', err);
     msgErr.style.display = 'block';
   } finally {
     setLoading(false);

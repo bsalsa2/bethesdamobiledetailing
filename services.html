@@ -5,104 +5,124 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services — Bethesda Mobile Detailing</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="landing.css" />
+  <link rel="stylesheet" href="inner.css" />
 </head>
 <body>
 
-  <nav>
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo">Bethesda <span>Mobile Detailing</span></a>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html" class="active">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="booking.html" class="nav-cta">Book Now</a></li>
-      </ul>
+  <header id="site-nav" class="scrolled">
+    <div class="nav-wrap">
+      <a href="index.html" class="wordmark">BMD</a>
+      <nav class="nav-center">
+        <a href="index.html">Home</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="booking.html" class="nav-book">Book Now</a>
+      <button class="hamburger" id="hamburger"><span></span><span></span></button>
     </div>
-  </nav>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="booking.html" class="mobile-book">Book Now</a>
+    </div>
+  </header>
 
-  <div class="page">
-    <div class="container">
+  <main class="inner-page">
+    <div class="inner-wrap">
 
-      <div class="page-header">
-        <p class="label">What we offer</p>
+      <div class="inner-header" data-animate>
+        <span class="overline">Pricing</span>
         <h1>Simple pricing,<br/>no surprises.</h1>
       </div>
 
-      <div class="services-list">
+      <div class="svc-list">
 
-        <div class="service-row">
-          <div class="service-info">
+        <div class="svc-row" data-animate>
+          <div class="svc-left">
             <h2>Exterior Detail</h2>
             <p>A thorough exterior clean that leaves your car looking fresh. We come to you with everything we need.</p>
-            <ul>
-              <li>Hand wash &amp; dry</li>
-              <li>Wheel &amp; tire cleaning</li>
-              <li>Window cleaning</li>
-              <li>Exterior wipe-down</li>
-            </ul>
+            <div class="svc-tags">
+              <span>Hand wash &amp; dry</span>
+              <span>Wheel &amp; tire cleaning</span>
+              <span>Window cleaning</span>
+              <span>Exterior wipe-down</span>
+            </div>
           </div>
-          <div class="service-price-col">
-            <span class="price">$40</span>
-            <a href="booking.html" class="btn btn-dark">Book</a>
+          <div class="svc-right">
+            <span class="svc-price">$40</span>
+            <a href="booking.html?service=exterior" class="btn-inner">Book</a>
           </div>
         </div>
 
-        <div class="service-row">
-          <div class="service-info">
+        <div class="svc-row" data-animate>
+          <div class="svc-left">
             <h2>Interior Detail</h2>
             <p>A deep clean of your car's interior — vacuumed, wiped down, and refreshed throughout.</p>
-            <ul>
-              <li>Full vacuum</li>
-              <li>Dashboard &amp; console wipe</li>
-              <li>Door panel cleaning</li>
-              <li>Interior window cleaning</li>
-            </ul>
+            <div class="svc-tags">
+              <span>Full vacuum</span>
+              <span>Dashboard &amp; console wipe</span>
+              <span>Door panel cleaning</span>
+              <span>Interior window cleaning</span>
+            </div>
           </div>
-          <div class="service-price-col">
-            <span class="price">$50</span>
-            <a href="booking.html" class="btn btn-dark">Book</a>
+          <div class="svc-right">
+            <span class="svc-price">$50</span>
+            <a href="booking.html?service=interior" class="btn-inner">Book</a>
           </div>
         </div>
 
-        <div class="service-row">
-          <div class="service-info">
+        <div class="svc-row" data-animate>
+          <div class="svc-left">
             <h2>Full Detail</h2>
             <p>The complete package — every inch of your car, inside and out. Our most thorough service.</p>
-            <ul>
-              <li>Everything in Exterior</li>
-              <li>Everything in Interior</li>
-              <li>Full interior vacuum</li>
-              <li>Dashboard &amp; console wipe</li>
-            </ul>
+            <div class="svc-tags">
+              <span>Everything in Exterior</span>
+              <span>Everything in Interior</span>
+              <span>Full interior vacuum</span>
+              <span>Dashboard &amp; console wipe</span>
+            </div>
           </div>
-          <div class="service-price-col">
-            <span class="price">$80</span>
-            <a href="booking.html" class="btn btn-dark">Book</a>
+          <div class="svc-right">
+            <span class="svc-price">$80</span>
+            <a href="booking.html?service=full" class="btn-inner">Book</a>
           </div>
         </div>
 
       </div>
-
     </div>
-  </div>
+  </main>
 
-  <footer>
-    <div class="container footer-inner">
-      <span class="footer-brand">Bethesda Mobile Detailing</span>
-      <nav class="footer-nav">
-        <a href="services.html">Services</a>
-        <a href="booking.html">Book</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <span class="footer-copy">&copy; 2026 Bethesda Mobile Detailing</span>
+  <footer class="site-footer">
+    <div class="footer-wrap">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="wordmark">BMD</span>
+          <p>Car detailing from the comfort of your home.</p>
+        </div>
+        <div class="footer-cols">
+          <div>
+            <h4>Pages</h4>
+            <a href="services.html">Services</a>
+            <a href="booking.html">Book Now</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <a href="tel:+12407888127">(240) 788-8127</a>
+            <a href="mailto:fletchhemeon@gmail.com">fletchhemeon@gmail.com</a>
+            <span>Bethesda, MD</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Bethesda Mobile Detailing. All rights reserved.</span>
+      </div>
     </div>
   </footer>
 
-  <script src="nav.js"></script>
+  <script src="landing.js"></script>
 </body>
 </html>
