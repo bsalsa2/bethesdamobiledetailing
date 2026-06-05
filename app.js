@@ -91,18 +91,16 @@ form.addEventListener('submit', async (e) => {
   setLoading(true);
 
   const templateParams = {
-    from_name:   `${document.getElementById('firstName').value.trim()} ${document.getElementById('lastName').value.trim()}`,
-    first_name:  document.getElementById('firstName').value.trim(),
-    last_name:   document.getElementById('lastName').value.trim(),
-    from_email:  document.getElementById('email').value.trim(),
-    phone:       document.getElementById('phone').value.trim(),
-    service:     document.getElementById('service').value,
-    date:        document.getElementById('date').value,
-    address:     document.getElementById('address').value.trim(),
-    car_info:    document.getElementById('carInfo').value.trim() || 'Not provided',
-    message:     document.getElementById('message').value.trim() || 'None',
-    to_name:     'Fletch',
-    reply_to:    document.getElementById('email').value.trim(),
+    customer_name:   `${document.getElementById('firstName').value.trim()} ${document.getElementById('lastName').value.trim()}`,
+    customer_phone:  document.getElementById('phone').value.trim(),
+    customer_email:  document.getElementById('email').value.trim(),
+    service:         document.getElementById('service').value,
+    preferred_date:  document.getElementById('date').value,
+    preferred_time:  document.getElementById('time').value,
+    address:         document.getElementById('address').value.trim(),
+    vehicle:         document.getElementById('carInfo').value.trim() || 'Not provided',
+    notes:           document.getElementById('message').value.trim() || 'None',
+    reply_to:        document.getElementById('email').value.trim(),
   };
 
   try {
