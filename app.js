@@ -6,9 +6,9 @@
 //   - Service ID:  Email Services tab
 //   - Template ID: Email Templates tab
 // =============================================
-const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
-const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+const EMAILJS_PUBLIC_KEY  = 'eHUGwjIRURwmBsw7D';
+const EMAILJS_SERVICE_ID  = 'service_hswezac';
+const EMAILJS_TEMPLATE_ID = 'template_9og5lel';
 
 // Initialize EmailJS with your public key
 emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
