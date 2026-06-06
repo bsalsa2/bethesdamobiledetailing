@@ -3,45 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Book — Bethesda Mobile Detailing</title>
+  <title>Book &mdash; Bethesda Mobile Detailing</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="landing.css" />
-  <link rel="stylesheet" href="inner.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header id="site-nav" class="scrolled">
-    <div class="nav-wrap">
-      <a href="index.html" class="wordmark">BMD</a>
-      <nav class="nav-center">
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">BMD</a>
+      <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
+        <a href="booking.html" class="nav-btn active">Book Now</a>
       </nav>
-      <a href="booking.html" class="nav-book">Book Now</a>
-      <button class="hamburger" id="hamburger"><span></span><span></span></button>
+      <button class="burger" id="burger"><span></span><span></span></button>
     </div>
-    <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-nav" id="mobile-nav">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
-      <a href="booking.html" class="mobile-book">Book Now</a>
+      <a href="booking.html">Book Now</a>
     </div>
   </header>
 
-  <main class="inner-page">
-    <div class="inner-wrap">
-
-      <div class="inner-header" data-animate>
-        <span class="overline">Appointments</span>
+  <div class="page">
+    <div class="wrap">
+      <div class="page-header">
+        <span class="label">Appointments</span>
         <h1>Book an appointment.</h1>
       </div>
 
-      <div class="book-layout">
+      <div class="booking-layout">
 
-        <aside class="book-aside" data-animate>
-          <p>Fill out the form and we'll confirm your appointment as soon as possible. We come to you — just provide your address and preferred time.</p>
+        <aside class="book-aside">
+          <p>Fill out the form and we'll confirm your appointment as soon as possible. We come to you &mdash; just provide your address and preferred time.</p>
           <div class="aside-list">
             <div class="aside-item">
               <span class="aside-label">Phone</span>
@@ -57,14 +55,14 @@
             </div>
             <div class="aside-item">
               <span class="aside-label">Pricing</span>
-              <span>Exterior $40 &nbsp;·&nbsp; Interior $50 &nbsp;·&nbsp; Full $80</span>
+              <span>Exterior $40 &nbsp;&middot;&nbsp; Interior $50 &nbsp;&middot;&nbsp; Full $80</span>
             </div>
           </div>
         </aside>
 
-        <form id="booking-form" novalidate data-animate>
+        <form id="booking-form" novalidate>
 
-          <div class="field-row">
+          <div class="row">
             <div class="field">
               <label for="firstName">First Name</label>
               <input type="text" id="firstName" placeholder="John" required />
@@ -75,7 +73,7 @@
             </div>
           </div>
 
-          <div class="field-row">
+          <div class="row">
             <div class="field">
               <label for="email">Email</label>
               <input type="email" id="email" placeholder="john@example.com" required />
@@ -90,13 +88,13 @@
             <label for="service">Service</label>
             <select id="service" required>
               <option value="" disabled selected>Select a service...</option>
-              <option value="Exterior Detail - $40">Exterior Detail — $40</option>
-              <option value="Interior Detail - $50">Interior Detail — $50</option>
-              <option value="Full Detail - $80">Full Detail — $80</option>
+              <option value="Exterior Detail - $40">Exterior Detail &mdash; $40</option>
+              <option value="Interior Detail - $50">Interior Detail &mdash; $50</option>
+              <option value="Full Detail - $80">Full Detail &mdash; $80</option>
             </select>
           </div>
 
-          <div class="field-row">
+          <div class="row">
             <div class="field">
               <label for="date">Preferred Date</label>
               <input type="date" id="date" required />
@@ -113,17 +111,17 @@
           </div>
 
           <div class="field">
-            <label for="vehicle">Vehicle <span class="optional">(optional)</span></label>
+            <label for="vehicle">Vehicle <span class="opt">(optional)</span></label>
             <input type="text" id="vehicle" placeholder="e.g. 2020 Honda Accord, Black" />
           </div>
 
           <div class="field">
-            <label for="notes">Notes <span class="optional">(optional)</span></label>
+            <label for="notes">Notes <span class="opt">(optional)</span></label>
             <textarea id="notes" rows="4" placeholder="Any special requests or details..."></textarea>
           </div>
 
           <button type="submit" id="submit-btn">
-            <span id="btn-text">Send booking request</span>
+            <span id="btn-text">Send Booking Request</span>
             <span class="spinner" id="spinner"></span>
           </button>
 
@@ -138,38 +136,22 @@
 
       </div>
     </div>
-  </main>
+  </div>
 
-  <footer class="site-footer">
-    <div class="footer-wrap">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <span class="wordmark">BMD</span>
-          <p>Car detailing from the comfort of your home.</p>
-        </div>
-        <div class="footer-cols">
-          <div>
-            <h4>Pages</h4>
-            <a href="services.html">Services</a>
-            <a href="booking.html">Book Now</a>
-            <a href="contact.html">Contact</a>
-          </div>
-          <div>
-            <h4>Contact</h4>
-            <a href="tel:+12407888127">(240) 788-8127</a>
-            <a href="mailto:fletchhemeon@gmail.com">fletchhemeon@gmail.com</a>
-            <span>Bethesda, MD</span>
-          </div>
-        </div>
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span class="logo">BMD</span>
+      <div class="footer-links">
+        <a href="services.html">Services</a>
+        <a href="booking.html">Book</a>
+        <a href="contact.html">Contact</a>
       </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Bethesda Mobile Detailing. All rights reserved.</span>
-      </div>
+      <span class="footer-copy">&copy; 2026 Bethesda Mobile Detailing</span>
     </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script src="landing.js"></script>
+  <script src="nav.js"></script>
   <script src="booking.js"></script>
 </body>
 </html>

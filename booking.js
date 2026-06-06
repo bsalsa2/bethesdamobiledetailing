@@ -1,6 +1,6 @@
 // ─────────────────────────────────────────────
 // EMAILJS CONFIGURATION
-// Replace these three values — emailjs.com dashboard:
+// Replace with your values from emailjs.com:
 //   Public Key  → Account > API Keys
 //   Service ID  → Email Services tab
 //   Template ID → Email Templates tab
@@ -11,8 +11,7 @@ const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
 
 emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
 
-// ── Pre-select service from URL param ──
-// e.g. booking.html?service=exterior
+// Pre-select service from URL param (e.g. booking.html?service=exterior)
 const serviceMap = {
   exterior: 'Exterior Detail - $40',
   interior: 'Interior Detail - $50',
@@ -24,11 +23,10 @@ if (param && serviceMap[param]) {
   if (sel) sel.value = serviceMap[param];
 }
 
-// ── Set minimum selectable date to today ──
+// Min date = today
 const dateInput = document.getElementById('date');
 if (dateInput) dateInput.min = new Date().toISOString().split('T')[0];
 
-// ── Form elements ──
 const form    = document.getElementById('booking-form');
 const btn     = document.getElementById('submit-btn');
 const btnText = document.getElementById('btn-text');
@@ -38,7 +36,7 @@ const msgErr  = document.getElementById('msg-error');
 
 function setLoading(on) {
   btn.disabled = on;
-  btnText.textContent = on ? 'Sending…' : 'Send booking request';
+  btnText.textContent = on ? 'Sending…' : 'Send Booking Request';
   spinner.classList.toggle('show', on);
 }
 
